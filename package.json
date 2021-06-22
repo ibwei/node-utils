@@ -1,0 +1,38 @@
+{
+  "name": "node-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
+    "changelog:first": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "commit": "npx cz",
+    "prepare": "husky install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ibwei/node-utils.git"
+  },
+  "dependencies": {
+    "@commitlint/cli": "^12.0.0",
+    "@commitlint/config-conventional": "^12.0.0",
+    "commitizen": "^4.2.1",
+    "commitlint": "^12.1.1",
+    "conventional-changelog-cli": "^2.1.1",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "4.3.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format:check",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "author": "bawei3600@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ibwei/node-utils/issues"
+  },
+  "homepage": "https://github.com/ibwei/node-utils#readme"
+}
